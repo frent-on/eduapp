@@ -1,0 +1,41 @@
+@charset "utf-8";
+/* CSS Document */
+@import url(http://fonts.googleapis.com/css?family=Poiret+One|Laila:400,600);
+*{
+	margin:0px;
+	padding:0px;
+	
+	}
+html,body{
+	
+	background-color:#DDDCDC;
+	
+	}
+.contenedor {
+	background-color:#743536;
+	overflow:hidden;
+	max-width:40%;
+	height:500px;
+	padding-top:20px;
+	padding-left:40px;
+}
+.titulo{
+	background-color:#407198;
+	width:98%;
+	text-align:center;
+	font-size:35px;
+	font-family: 'Poiret One', cursive;
+	border-radius:10px;
+	padding-top:3px;
+	}
+span{
+	font-size:30px;
+	}	
+input[type="text"],[type="password"],[type="email"]{
+	width:90%;
+	height:35px;
+	font-family:'laila';
+	margin-top:10px;
+	margin-left:10px;
+	
+	}
