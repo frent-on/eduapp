@@ -1,4 +1,7 @@
 from django import forms
+from django.forms  import ModelForm
+
+from app.models import *
 
 class ContactForm(forms.Form):
 	Email = forms.EmailField(widget = forms.TextInput())
@@ -14,3 +17,8 @@ class RegisterForm(forms.Form):
 	password_one = forms.CharField(label = "Password",widget = forms.PasswordInput(render_value=False))
 	password_two = forms.CharField(label = "Confirmar Password",widget = forms.PasswordInput(render_value=False))	
 
+class RegistroEstudianteForm(ModelForm):
+	class Meta:
+		model = Estudiante
+		exclude =("materias","user")
+		

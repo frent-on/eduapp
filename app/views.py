@@ -77,3 +77,9 @@ def registro_vista(request):
 	ctx = {'msg':mensaje}
 	return render_to_response('formularioregistro.html',ctx,context_instance=RequestContext(request))
 
+def registro_estudiante_view(request):
+	form = RegistroEstudianteForm()
+	ctx ={'form':form}
+	return render_to_response('registropython.html',ctx,context_instance=RequestContext(request))
+
+

@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Documento sin título</title>
+{% load static from staticfiles %}
+<link type="text/css" rel="stylesheet" href="/static/css/estilos.css"/>
+<link type="text/css" rel="stylesheet" href="style.css"/>
+<link type="text/css" rel="stylesheet" href="/static/css/bootstrap.css"/>
+<link type="text/css" rel="stylesheet" href="static/css/bootstrap.min.css"/>
+<link href='http://fonts.googleapis.com/css?family=Poiret+One|Laila:400,600' rel='stylesheet' type='text/css'>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.js"></script>
+
+</head>
+
+<body>
+
+	<section class="contenedor">
+    
+    	<section class="titulo">
+        <p>Formulario Registro</p>
+        </section>
+        <section class="cuerpo-formulario">
+        
+        <form>
+            {% csrf_token %}
+            {{ form.as_p}}
+            <input type="submit" value="Registrar" class="btn"/>
+            
+         <!--   
+        <input type="email"  name="txt_email" placeholder="Correo Electronico" />
+        <input type="password"  name="txt_pass" placeholder="Contraseña" />
+        <input type="password"  name="txt_repass" placeholder="Vuelva a escribir contraceña" />
+        <input type="text"  name="txt_nombres" placeholder="Nombres Completos" />
+        <input type="text"  name="txt_apellidos" placeholder="Apellidos Completos" />
+        <input type="text"  class="input-small"name="txt_email" placeholder="Correo Electronico" />
+    -->
+        				 
+        
+        </form>
+        
+        </section>
+   
+    </section>
+</body>
+</html>
