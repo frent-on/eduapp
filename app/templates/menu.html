@@ -1,0 +1,12 @@
+	<nav>
+		<ul>
+			<li id="flechita_nav"><a href="/"></a></li>
+			{% for catp in categoriasp %}
+			
+				<li><a href="{% url "categoriap" catp.pk %}">{{catp}}</a></li>
+			{% endfor %}
+
+			
+			
+		</ul>
+	</nav>
