@@ -17,8 +17,13 @@ class RegisterForm(forms.Form):
 	password_one = forms.CharField(label = "Password",widget = forms.PasswordInput(render_value=False))
 	password_two = forms.CharField(label = "Confirmar Password",widget = forms.PasswordInput(render_value=False))	
 
-class RegistroEstudianteForm(ModelForm):
+class RegistroEstudianteForm(forms.Form):
+	email = forms.EmailField(widget=forms.TextInput(attrs={'placeholder': 'Correo Electronico'}),label=False)
+	password_one = forms.CharField(widget = forms.PasswordInput(render_value=False,attrs={'placeholder': 'Contraseña'}),label=False)
+	password_two = forms.CharField(widget = forms.PasswordInput(render_value=False,attrs={'placeholder': 'Vuelva a Escribir su Contraseña'}),label=False)	
+	
+	"""
 	class Meta:
 		model = Estudiante
 		exclude =("materias","user")
-		
+	"""
